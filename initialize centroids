@@ -1,0 +1,3 @@
+def initialize_centroids(n) :
+    indices = np.random.choice(df.shape[0] , n , replace=False)
+    return df.iloc[indices].to_numpy()
