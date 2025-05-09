@@ -1,0 +1,11 @@
+def update_centroid(x_df , centroid ,d) :
+    x_df = pd.DataFrame(x_df)
+    x = x_df.to_numpy()
+    new_centroied = []
+
+    for i in range(len(centroid)):
+        cluster_points = x[d == i] 
+        if len(cluster_points) > 0:
+            mean_point = np.mean(cluster_points, axis=0)
+            new_centroied.append(mean_point)    
+    return np.array(new_centroied)
